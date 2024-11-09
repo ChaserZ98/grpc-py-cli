@@ -1,13 +1,19 @@
 [tool.poetry]
 name = "grpc-py-cli"
 version = "0.1.0"
-description = ""
+description = "CLI tool for gRPC Python code generation"
 authors = ["Feiyu Zheng <feiyuzheng98@gmail.com>"]
 readme = "README.md"
-packages = [{include = "grpc_py_cli", from = "src"}]
+packages = [{ include = "grpc_py_cli", from = "src" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
+click-extra = "^4.11.1"
+ruff = "^0.7.3"
+grpcio-tools = "^1.67.1"
+
+[tool.poetry.scripts]
+grpc-py = "grpc_py_cli:main"
 
 
 [build-system]
